@@ -22,7 +22,7 @@ batchstart = 0:NT:NT*(Nbatch-Nbatch_buff);
 delta = NaN * ones(Nbatch, 1);
 iperm = randperm(Nbatch);
 if ops.GPU
-    gpuDevice(1);
+    gpuDevice(ops.GPU);
 end
 
 switch ops.initialize
